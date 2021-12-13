@@ -36,9 +36,17 @@ const HomePage = ({ toggleSavedMovies, savedMovies }) => {
 
   const onPreviousPage = () => {
     setPage(page - 1);
+    window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+});
   };
   const onNextPage = () => {
     setPage(page + 1);
+    window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+});
   };
 
   return (
@@ -49,14 +57,17 @@ const HomePage = ({ toggleSavedMovies, savedMovies }) => {
         toggleSavedMovies={toggleSavedMovies}
         savedMovies={savedMovies}
       />
-      {page > 1 && (
-        <button type="button" onClick={onPreviousPage}>
-          PreviousPage
+      <div className={s.btnWrapper}>
+          <button type="button" disabled={page <= 1} onClick={onPreviousPage} className={s.btn}>
+          <span className={s.arrow}>&#10232;Last</span>
         </button>
-      )}
-      <button type="button" onClick={onNextPage}>
-        NextPage
+        <button type="button" onClick={onNextPage} className={s.btn}>
+        <span className={s.arrow}>{page}</span>
       </button>
+      <button type="button" onClick={onNextPage} className={s.btn}>
+        <span className={s.arrow}>Next&#10233;</span>
+      </button>
+      </div>
     </div>
   );
 };

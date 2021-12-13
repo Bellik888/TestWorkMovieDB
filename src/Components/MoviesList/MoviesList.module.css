@@ -12,7 +12,6 @@
   flex-wrap: wrap;
   justify-content: space-around;
   padding: 0 50px;
-  padding-bottom: 50px;
   margin: 0;
   list-style: none;
   /* padding-left: 50px; */
@@ -46,10 +45,10 @@
   cursor: pointer;
 }
 .addMovie {
-  color: red;
+  color: rgba(255, 0, 0, 0.808);
   font-size: 40px;
 }
 .removeMovie {
-  color: white;
+  color: rgba(179, 100, 35, 0.37);
   font-size: 40px;
 }
