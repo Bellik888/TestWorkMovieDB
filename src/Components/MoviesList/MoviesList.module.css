@@ -40,3 +40,16 @@
 .img {
   margin: 0 auto;
 }
+.btnHeart {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.addMovie {
+  color: red;
+  font-size: 40px;
+}
+.removeMovie {
+  color: white;
+  font-size: 40px;
+}

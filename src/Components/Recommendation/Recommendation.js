@@ -15,8 +15,6 @@ export const Recommendation = ({ toggleSavedMovies, savedMovies }) => {
     const result = await fetchRecommendationMovie(id);
     setRecommendation(result);
   };
-  console.log(movieId)
-  console.log(recommendation)
   return (
     <>
       <h1>Recommendation for you</h1>

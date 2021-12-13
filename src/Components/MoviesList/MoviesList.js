@@ -5,7 +5,7 @@ import { fetchAllGenres } from '../../service/FetchMovie';
 
 import s from './MoviesList.module.css';
 
-export const MoviesList = ({ moviesList, toggleSavedMovies, savedMovies }) => {
+export const MoviesList = ({ moviesList, toggleSavedMovies, savedMovies,location }) => {
   const [genres, setGenres] = useState([]);
   const fetchGenres = async () => {
     let result = await fetchAllGenres();
@@ -61,11 +61,12 @@ export const MoviesList = ({ moviesList, toggleSavedMovies, savedMovies }) => {
                   poster_path,
                 })
               }
+              className={s.btnHeart}
             >
               {savedMovies.find(el => el.id === id) ? (
-                <span>&#9733;</span>
+                <span className={s.addMovie}>&#10084;</span>
               ) : (
-                <span>&#9734;</span>
+                <span className={s.removeMovie}>&#10084;</span>
               )}
             </button>
           </li>

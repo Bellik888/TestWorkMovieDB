@@ -16,9 +16,9 @@ export const SearchForm = ({ handleChangeQuery }) => {
         placeholder="Choose your movie"
         className={s.input}
       />
-      <button type="submit" className={s.btn}>
+      {/* <button type="submit" className={s.btn}>
         Search
-      </button>
+      </button> */}
     </form>
   );
 };
